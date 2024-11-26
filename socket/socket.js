@@ -11,7 +11,10 @@ app.use(cookieParser());
 const server = http.createServer(app);
 const io = new Server(server, {
   cors: {
-    origin: ["http://localhost:5173"], // Specify allowed origins
+    origin: [
+      "http://localhost:5173",
+      "https://chat-application-sanjana.vercel.app",
+    ], // Specify allowed origins
     methods: ["GET", "POST"],
     credentials: true,
   },
